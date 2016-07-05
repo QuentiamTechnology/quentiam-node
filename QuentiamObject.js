@@ -8,9 +8,9 @@ class QuentiamObject{
   send(params={}){
     params.id = this.id;
 
-    this.client.winston.log("debug", `"${this.id}" sending message with ${JSON.stringify(params)}"`);
+    console.debug(`"${this.id}" sending message with ${JSON.stringify(params)}"`);
 
-    this.client.ws_connection.send(JSON.stringify(params));
+    this.client.ws.send(JSON.stringify(params));
   }
 
   receive(data){}

@@ -8,7 +8,7 @@ class PingObject extends QuentiamObject{
   }
 
   receive(data){
-    this.client.winston.log("debug", "Server sent back a pong!");
+    console.debug("Server sent back a pong!");
   }
 }
 
